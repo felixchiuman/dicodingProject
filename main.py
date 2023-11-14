@@ -42,7 +42,7 @@ def main():
         filtered_df = day_df[day_df["yr"] == 2011]
     elif year_range == "2012":
         filtered_df = day_df[day_df["yr"] == 2012]
-    else:  # For 2011-2012
+    else:
         filtered_df = day_df[(day_df["yr"] >= 2011) & (day_df["yr"] <= 2012)]
 
     highest_month = filtered_df.groupby("mnth")["cnt"].sum().idxmax()
@@ -57,7 +57,6 @@ def main():
     monthly_rentals = filtered_df.groupby("mnth")["cnt"].mean()
     plot = monthly_rentals.plot(kind="bar", color="skyblue")
 
-    # Highlight highest and lowest months
     plot.patches[month_order.index(highest_month)].set_facecolor("blue")
     plot.patches[month_order.index(lowest_month)].set_facecolor("blue")
 
