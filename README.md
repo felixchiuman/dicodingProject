@@ -13,3 +13,6 @@ pip install -r requirements.txt
 
 #run streamlit
 streamlit run main.py
+```
+# Streamlit Cloud
+https://dicodingproject-fhkzdckhsqwxgqpuxpmdtr.streamlit.app/
